@@ -6,7 +6,7 @@ $\sigma^2_a$ = variance among subpopulations
 $\sigma^2_b$ = variance between individuals within a subpopulation  
 $\sigma^2_w$ = variance within an individual  
 
-### F~IT~, F~ST~, F~IS~
+### $F_{IT}, $F_{ST}$, $F_{IS}$
 Variance components add up to total variance:
 $\sigma^2_a$ + $\sigma^2_b$ + $\sigma^2_w$ = $\sigma^2$
 
@@ -17,12 +17,12 @@ Correlation of genes randomly picked in a subpopulation:
 $F_{ST}$ = $\theta$ = $\rho_a$ = $\frac{\sigma^2_a}{\sigma^2}$
 
 Correlation of genes in an individual randomly picked in a certain subpopulation: 
-$F_{IS}$ = $f$ = $\rho$~b~ = $\frac{F-\theta}{1-\theta}$ = $\frac{\sigma^2_b}{\sigma^2_b + \sigma^2_w}$
+$F_{IS}$ = $f$ = $\rho_b$ = $\frac{F-\theta}{1-\theta}$ = $\frac{\sigma^2_b}{\sigma^2_b + \sigma^2_w}$
 
 Note that variance among subpopulations ($\sigma^2_a$) is not relevant here because we are looking within subpopulations.
 
-### Meanings of values of F~ST~
-High $F$~ST~ means high variance of genes among subpopulations (high $\sigma^2_a$), meaning that subpopulations are have more different genes from each other.
+### Meanings of values of $F_{ST}$
+High $F_{ST}$ means high variance of genes among subpopulations (high $\sigma^2_a$), meaning that subpopulations are have more different genes from each other.
 
 ### References
 [Cockerham CC. Variance of gene frequencies. Evolution. 1969 Mar 1:72-84.](https://www.jstor.org/stable/2406485?seq=1)  
