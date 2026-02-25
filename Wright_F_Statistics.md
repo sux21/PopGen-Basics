@@ -6,7 +6,7 @@ $\sigma^2_a$ = variance among subpopulations
 $\sigma^2_b$ = variance between individuals within a subpopulation  
 $\sigma^2_w$ = variance within an individual  
 
-### $F_{IT}, $F_{ST}$, $F_{IS}$
+### $F_{IT}$, $F_{ST}$, $F_{IS}$
 Variance components add up to total variance:
 $\sigma^2_a$ + $\sigma^2_b$ + $\sigma^2_w$ = $\sigma^2$
 
