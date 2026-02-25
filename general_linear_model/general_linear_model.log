@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.17)  9 FEB 2026 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.17)  10 FEB 2026 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -96,7 +96,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box54
 )
-No file general_linear_model.aux.
+(./general_linear_model.aux)
 \openout1 = `general_linear_model.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -158,10 +158,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1208 strings out of 473190
- 18198 string characters out of 5719979
+ 1211 strings out of 473190
+ 18285 string characters out of 5719979
  426566 words of memory out of 5000000
- 24504 multiletter control sequences out of 15000+600000
+ 24505 multiletter control sequences out of 15000+600000
  570801 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,14n,65p,216b,195s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -175,7 +175,7 @@ amsfonts/cm/cmr12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr17.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on general_linear_model.pdf (3 pages, 117695 bytes).
+Output written on general_linear_model.pdf (3 pages, 117761 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
