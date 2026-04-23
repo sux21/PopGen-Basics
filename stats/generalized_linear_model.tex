@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\title{Generalized Linear Model}
+\date{\today}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt} % don't indent the line
+\begin{document}
+\maketitle
+
+Family: binomial or Poisson. This specifies the variance function. This allows the generalized linear model to relax the assumption of constant variance of residuals.\\
+
+Link functions: transform response variable (e.g. count, probability) by some functions (e.g. natural log, logit). The transformed response variable is called linear predictor $\eta$ (predictor here means predicted value): $\eta = \beta_0 + \beta_1x_1 + \cdots$ \\
+
+$\eta$ has a linear relationship with $\beta_0 + \beta_1x_1 + \cdots$:
+\[ \eta = \beta_0 + \beta_1x_1 + \cdots \]
+
+Apply inverse link $f^{-1}(x)$ to $\eta$ to transform it back to y: 
+\[ f^{-1}(\eta) = f^{-1}(\beta_0 + \beta_1x_1 + \cdots) \]
+
+\[ y = f^{-1}(\beta_0 + \beta_1x_1 + \cdots) \] \\
+
+The model will predict $\hat{y}$ by applying inverse link to $\beta_0 + \beta_1x_1 + \cdots$. \\
+
+\section{Link function: natural log (when y is count)}
+Link: $\eta = ln(y)$ \\
+
+Inverse link: $ y = e^\eta$ \\
+
+Example: \\
+
+There is a generalized linear model where $\beta_0 = 1, \beta_1 = 1, x_1 = -5$:
+\[ ln(y) = \eta = \beta_0 + \beta_1x_1\] \\
+
+The predicted value of $ln(y)$ is $1 + 1 \times (-5) = -4$ (link scale). The predicted value of $y$ is $e^{-4} \approx 0.018$ (data scale).
+
+
+\section{Link function: logit (when y is probability)}
+odds = $\frac{p}{1-p}$ \\
+log-odds (logit) = $ln(\frac{p}{1-p})$ \\
+
+Link: $\eta = ln(\frac{y}{1-y})$ \\
+Inverse link: $y = \frac{1}{1+e^{-\eta}}$ \\
+
+Example: \\
+
+Calculate the probability $p$ when log-odds is 0. \\
+
+\begin{equation*}
+\begin{split}
+ln(\frac{p}{1-p}) &= 0 \\
+e^{log(\frac{p}{1-p})} &= e^0 \\
+\frac{p}{1-p} &= 1 \\
+p &= 1-p \\
+p &= 0.5
+\end{split}
+\end{equation*}
+
+Calculate the probability $p$ when log-odds is 1. \\
+
+\begin{equation*}
+\begin{split}
+ln(\frac{p}{1-p}) &= 1 \\
+e^{ln(\frac{p}{1-p})} &= e^1 \\
+\frac{p}{1-p} &= e \\
+p &= e-ep \\
+(1+e)p &= e \\
+p &= \frac{e}{1+e} \approx 0.73
+\end{split}
+\end{equation*}
+
+
+
+
+\end{document}

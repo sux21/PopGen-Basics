@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\title{Bayesian Statistics}
+\date{\today}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt} % don't indent the line
+\begin{document}
+\maketitle
+
+\section{Posterior Distribution}
+$\theta$ is the parameter. $D$ is data. $P(\theta)$ is prior distribution. $P(\theta|D)$ is posterior distribution.\\
+
+Probability of parameter and data is defined as: $P(\theta \cap D) = P(\theta)P(D|\theta) = P(D)P(\theta|D)$ \\
+
+Posterior distribution can be calculated by rearrangement: $P(\theta|D) = \frac{P(\theta)P(D|\theta)}{P(D)}$ \\
+
+\section{Markov chain Monte Carlo}
+MCMC estimates the posterior, $P(\theta|D)$, without estimating $P(D)$. \\
+
+The goal of MCMC is to find a range with the parameter. \\
+
+MCMC process:
+\begin{enumerate}
+    \item Choose a starting point in parameter space based on the prior .
+    \item Move from one point to another based on: $P(\frac{A \rightarrow B}{B \rightarrow A} \propto \frac{Post(B)}{Post(A)})$, where A and B are two points in parameter space.
+    \item The process will spend more time around a certain point.
+    \item The process stops after the posterior distribution is not changing (converges).
+    \item The program will output a list of all points explored during the process.
+    \item A range with the true parameter is be picked from the list.
+\end{enumerate}
+
+
+
+\end{document}
