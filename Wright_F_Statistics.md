@@ -15,6 +15,8 @@ $F_{IT}$ = $F$ = $\rho_{ab}$ = $\frac{\sigma^2_a + \sigma^2_b}{\sigma^2}$
 Correlation of genes randomly picked in a subpopulation: 
 $F_{ST}$ = $\theta$ = $\rho_a$ = $\frac{\sigma^2_a}{\sigma^2}$ = $\frac{\sigma^2_a}{\sigma^2_a + \sigma^2_b + \sigma^2_w}$
 
+$F_{ST}$ is maximum at 1, meaning that $\sigma^2_b = 0$ (individuals in a subpopulation are completely the same, no variation) and $\sigma^2_w = 0$ (two alleles in an individual completely the same, no variation)
+
 Correlation of genes in an individual randomly picked in a certain subpopulation: 
 $F_{IS}$ = $f$ = $\rho_b$ = $\frac{F-\theta}{1-\theta}$ = $\frac{\sigma^2_b}{\sigma^2_b + \sigma^2_w}$
 
