@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\title{Linkage Disequilibrium}
+\date{\today}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\setlength{\parindent}{0pt} % don't indent the line
+\begin{document}
+\maketitle
+
+\section{Phase is unknown}
+When scoring genotypes (e.g. microsatellites), the phase is unknown meaning that we don't know whether alleles from two different loci are on the same or different chromosomes. For example, for a heterozygous individual $A_1A_2B_1B_2$, $A_1$ and $B_1$ can be on the same chromosome ($A_1B_1/A_2B_2$) or different chromosomes ($A_1B_2/A_2B_1$). \\
+
+Because of this issue, a composite measure of linkage disequilibrium is defined: 
+$$\Delta_{AB} = p_{AB} + p_{A/B} - 2p_Ap_B$$
+$p_{AB}$ is the proportion of gametes with two alleles at the same chromosome. $p_{A/B}$ is the proportion of gametes with the two alleles at different chromosomes. \\
+
+This approach does not require genotype proportions to be in Hardy-Weinberg equilibrium. \\
+
+A method for more than two alleles is described in \cite{Schaid2004}. For two loci, A and B, locus A has $J$ alleles and locus B has $K$ alleles. The composite measure of linkage disequilibrium is defined as:
+$$\Delta_{A_jB_k} = P(A_jB_k \text{ on the same or different haplotypes}) - 2p_{A_j}p_{B_k}$$
+$P(A_jB_k)$ is the observed proportion of gametes with alleles $A_j$ and $B_k$ on the same or different haplotypes. $p_{A_j}$ and $p_{B_k}$ are the observed allele frequencies of $A_j$ and $B_k$. \\
+
+An estimate of $\Delta_{A_jB_k}$ can be estimated is:
+$$\hat{\Delta}_{A_jB_k} = \frac{n_{A_jB_k}}{N} - 2\hat{p}_{A_j}\hat{p}_{B_k}$$
+$n_{A_jB_k}$ is the number of gametes with alleles $A_j$ and $B_k$ on the same or different haplotypes. $N$ is the total number of gametes. $\hat{p}_{A_j}$ and $\hat{p}_{B_k}$ are the observed allele frequencies of $A_j$ and $B_k$. \\
+
+\textcolor{blue}{Are there $J \times K$ or $(J-1)\times(K-1)$ number of composite coefficients?} \\
+
+A composite correlations for a pair of alleles is defined by \cite{Zaykin2008}:
+$$r_{A_jB_k}^2 = \frac{\Delta_{A_jB_k}^2}{[p_{A_j}(1-p_{A_j})+D_{A_j}][p_{B_k}(1-p_{B_k})+D_{B_k}]}$$
+$D_{A_j}$ and $D_{B_k}$ are the Hardy-Weinberg disequilibrium coefficients: $D = \text{observed homozygote proportion} - \text{expected homozygote proportion }(p^2)$. \\
+
+A correlation-based statistic $T_2$ is proposed by \cite{Zaykin2008}: 
+$$T_2 = \frac{(J-1)(K-1)N}{J \cdot K}\sum_{j=1}^J\sum_{k=1}^K r_{A_jB_k}^2$$
+$N$ is the total number of individuals. \textcolor{blue}{How to deal with missing genotype at some loci?}\\
+
+$T_2$ follows a $\chi^2$ distribution: $$T_2 \sim \chi^2_{(J-1)(K-1)}$$
+
+\begin{thebibliography}{9}
+\bibitem{Schaid2004}
+    Schaid DJ.
+    2004.
+    Linkage disequilibrium testing when linkage phase is unknown.
+    \emph{Genetics}.
+    166(1):505-12.
+    doi: 10.1534/genetics.
+
+\bibitem{Zaykin2008}
+    Zaykin DV, Pudovkin A, Weir BS. 
+    2008.
+    Correlation-based inference for linkage disequilibrium with multiple alleles. 
+    \emph{Genetics}.
+    180(1):533-45. 
+    doi: 10.1534/genetics.108.089409.
+\end{thebibliography}
+
+
+
+\end{document}
