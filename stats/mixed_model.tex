@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\title{Mixed Model}
+\date{\today}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt} % don't indent the line
+\begin{document}
+\maketitle
+
+\section{Fixed effect and random effect}
+Fixed effect: categorical variables which already represent the entire population. \\
+
+Random effect: categorical variables which levels are randomly chosen from a larger population. This is used to correct correlated observations. \\
+
+Consider there are $g$ groups. Group 1 has $n_1$ observations ($X_1, X_2, ..., X_{n_1}$) with a group mean $\mu_1$, group 2 has $n_2$ observations ($Y_1, Y_2, ..., Y_{n_2}$) with a group mean $\mu_2$, and group g has $n_g$ observations ($Z_1, Z_2, ..., Z_{n_g}$) with a group mean $\mu_g$. The total number of observations is $N = n_1 + n_2 + ... + n_g$. The total mean is $\mu_{tot}=\sum_{i=1}^{g}\mu_i$. \\
+
+The variation within groups $\sigma^2_{\text{within}}$ is calculated as 
+
+$$\sigma^2_{\text{within}} = \frac{1}{N}\bigg[\sum_{k=1}^{n_1}(X_k - \mu_1)^2 + \sum_{l=1}^{n_2}(Y_l - \mu_2)^2 + \dots + \sum_{m=1}^{n_g}(Z_m - \mu_g)^2\bigg]$$\\
+
+The variation among groups $\sigma^2_{\text{among}}$ is calculated as 
+
+$$\sigma^2_{\text{among}} = \frac{1}{N}\bigg[n_1(\mu_1-\mu_{tot})^2 + n_2(\mu_2-\mu_{tot})^2 + \dots + n_g(\mu_g - \mu_{tot})^2\bigg]$$\\
+
+If group is treated as fixed effect, $\sigma^2_{\text{among}}$ is assumed infinite, meaning that group means are very different so knowing the mean of one group gives no information about mean of another group. If group is treated as random effect, we borrow information from other groups by estimating among-group variance. Fixed effects do not borrow information from other groups.
+\\
+
+
+\end{document}
