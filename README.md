@@ -19,3 +19,5 @@
 [The Probability Lifesaver](https://api.pageplace.de/preview/DT0400.9781400885381_A29770149/preview-9781400885381_A29770149.pdf)
 
 [Landscape Genetics](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118525258)
+
+[Genetics and genomics of hybridization](https://www.nature.com/articles/s41576-026-00995-7)
